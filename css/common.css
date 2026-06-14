@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+/* =========================================
+   GENEL AYARLAR
+========================================= */
+button {
+  padding: 8px 16px;
+  background-color: #4e75ff; /* Taslaktaki normal mavi */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover (Üzerine gelince) - Daha AÇIK mavi */
+button:hover {
+  background-color: #6c8cff;
+}
+
+/* Destroy Butonu - Normal Kırmızı */
+[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+/* Destroy Butonu Hover - Daha AÇIK Kırmızı */
+[data-destroy]:hover {
+  background-color: #ff7676;
+}
+
+/* =========================================
+   GÖREV 1: Kategoriler Listesi
+========================================= */
+#categories {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background-color: #f6f6fe; /* Taslaktaki açık gri/mor arka plan */
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  width: 400px; /* Kutu genişliği */
+}
+
+.item h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.item ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item ul li {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+}
+
+/* =========================================
+   GÖREV 2: Resim Galerisi (Flexbox)
+========================================= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Sığmayanlar alta geçsin */
+  gap: 24px; /* Resimler arası boşluk */
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-item {
+  /* 3'lü kolon düzeni (gap boşluklarını çıkararak) */
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resimleri orantılı keserek oturtur */
+  border-radius: 4px;
+}
+
+/* =========================================
+   GÖREV 3 & 4: Formlar ve Text Field
+========================================= */
+input {
+  padding: 8px 16px;
+  border: 1px solid #808080; /* Normal durum: Gri çerçeve */
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Hover (Üzerine gelince) durumu */
+input:hover {
+  border-color: #000000; /* Taslaktaki gibi daha belirgin koyu çerçeve */
+}
+
+/* Active/Focus (Tıklayıp yazı yazarken) durumu */
+input:focus {
+  border-color: #4e75ff; /* Tıklanınca taslaktaki gibi mavi çerçeve */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px; /* Form genişliği */
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* =========================================
+   GÖREV 6: Create ve Destroy Kontrolleri
+========================================= */
+#controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+#controls input {
+  width: 120px;
+  text-align: center;
+}
+
+/* Destroy Butonu - Normal Kırmızı */
+[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+/* Destroy Butonu Hover - Daha AÇIK Kırmızı */
+[data-destroy]:hover {
+  background-color: #ff7676;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Kutular arası boşluk */
+  align-items: flex-start;
+}
